@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import React, { useState } from "react";
-import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
@@ -37,18 +37,19 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" about="About Us" mode = {mode} toggleMode={toggleMode} />
       <Alert alert= {alert}/>
       <div className="container my-3">
-      <Routes>
+      <TextForm  showAlert = {showAlert} heading="Enter your Text to Analyze" mode = {mode}/>
+      {/* <Routes>
       <Route  exact path="/" element={<TextForm  showAlert = {showAlert} heading="Enter your Text to Analyze" mode = {mode}/>}>
       </Route>
       <Route exact path="/about" element={<About/>}>
       </Route>
-      </Routes>
+      </Routes> */}
       </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }

@@ -61,7 +61,7 @@ const handleCopy = ()=> {
     </div>
     <div className={`container text-${props.mode==="light"?"#6c757d":"light"} bg-${props.mode==="light"?"light":"#6c757d"}my-3`}>
       <h2>Your input Summary</h2>
-      <p>{text.length===0?"0":(text.trim(" ")).split(" ").length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
       <p> {0.008 * text.split(" ").length} Minutes read </p>
       <h2>Preview</h2>
       <p>{text.length>0 ? text : "Enter your text in the above box to preview here"}</p>
